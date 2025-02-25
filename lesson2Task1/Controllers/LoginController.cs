@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microso  ft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Lesson2Task1.Models;
 using System.Linq;
@@ -7,10 +7,12 @@ namespace Lesson2Task1.Controllers
 {
     public class LoginController : Controller
     {
+
         [HttpGet]
         public IActionResult Login() {
             return View();
         }
+
         [HttpPost]
         public IActionResult Login(string UserName, string Password)
         {
@@ -25,16 +27,13 @@ namespace Lesson2Task1.Controllers
             }
             else
             {
-
                 ViewBag.Error = "Invalid username or password";
-
                 return View();
-
             }
         }
-                public IActionResult Logout()
+
+        public IActionResult Logout()
         {
-            
             HttpContext.Session.Clear();
             return RedirectToAction("Login");
         }

@@ -12,7 +12,6 @@
             new User { Id = 1, UserName = "Admin", Password = "admin1", IsAdmin = true},
             new User { Id = 2, UserName = "Natali", Password = "Natali2", IsAdmin = false},
             new User { Id = 3, UserName = "Jora", Password = "Jora3", IsAdmin = false}
-        };
-       
+        };  
     }
 }
